@@ -26,7 +26,10 @@ h3{color:#14315f;margin-top:24px}
 .badge{display:inline-block;background:var(--soft);color:#173b80;padding:5px 10px;border-radius:999px;font-size:.85rem;margin:3px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .card{border:1px solid #dbe4f0;border-radius:14px;padding:16px;background:#fff}
-.day{border-left:6px solid var(--blue);padding:18px;margin:16px 0;background:#fbfdff;border-radius:12px}
+.day{border-left:6px solid var(--blue);padding:18px;margin:16px 0;background:#fbfdff;border-radius:12px;
+  /* ⚡ Bolt: Performance boost - content-visibility: auto tells the browser to skip layout and painting of this element until it's near the viewport.
+     contain-intrinsic-size: auto 150px prevents layout shifts by letting the browser remember the rendered size once it enters the viewport. */
+  content-visibility:auto;contain-intrinsic-size:auto 150px}
 .day h3{margin-top:0}
 table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
 th,td{border:1px solid #d9e2ef;padding:10px;text-align:left;vertical-align:top}
