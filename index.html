@@ -20,13 +20,17 @@ header{background:linear-gradient(135deg,#07111f,#14315f);color:white;padding:48
 header h1{font-size:2.35rem;margin:0 0 12px}
 header p{max-width:980px;font-size:1.08rem}
 main{max-width:1180px;margin:auto;padding:28px}
-section{background:var(--card);margin:22px 0;padding:26px;border-radius:18px;box-shadow:0 6px 22px rgba(9,30,66,.08);content-visibility:auto;contain-intrinsic-size:auto 400px}
+/* Use content-visibility to defer rendering of off-screen sections, improving initial load performance */
+section{background:var(--card);margin:22px 0;padding:26px;border-radius:18px;box-shadow:0 6px 22px rgba(9,30,66,.08);content-visibility:auto;contain-intrinsic-size:auto 600px}
+/* Specific hint for the very long roadmap section to prevent layout shift */
+.roadmap-section{content-visibility:auto;contain-intrinsic-size:auto 7500px}
 h2{color:#0f2753;border-bottom:3px solid var(--gold);padding-bottom:8px}
 h3{color:#14315f;margin-top:24px}
 .badge{display:inline-block;background:var(--soft);color:#173b80;padding:5px 10px;border-radius:999px;font-size:.85rem;margin:3px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{border:1px solid #dbe4f0;border-radius:14px;padding:16px;background:#fff}
-.day{border-left:6px solid var(--blue);padding:18px;margin:16px 0;background:#fbfdff;border-radius:12px}
+/* Granular content-visibility for repetitive items to further improve scroll smoothness */
+.card{border:1px solid #dbe4f0;border-radius:14px;padding:16px;background:#fff;content-visibility:auto;contain-intrinsic-size:auto 292px}
+.day{border-left:6px solid var(--blue);padding:18px;margin:16px 0;background:#fbfdff;border-radius:12px;content-visibility:auto;contain-intrinsic-size:auto 231px}
 .day h3{margin-top:0}
 table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
 th,td{border:1px solid #d9e2ef;padding:10px;text-align:left;vertical-align:top}
@@ -148,7 +152,7 @@ You are a patient technology teacher. Explain artificial intelligence to a compl
 <div class="warning"><strong>Important:</strong> Some platforms may offer free learning content but charge for certificates, labs, subscriptions, or advanced access. Always check the pricing page before enrolling.</div>
 </section>
 
-<section>
+<section class="roadmap-section">
 <h2>30-Day Roadmap</h2>
 
 <div class="day"><h3>Day 1 — What Is AI?</h3><p><strong>Learn:</strong> AI is a computer system that performs tasks connected to intelligence: language, images, prediction, planning, and pattern recognition.</p><p><strong>Guided practice:</strong> Ask an AI: “Explain AI to me like I am 10 years old, then explain it again like I am an adult beginner.”</p><p><strong>Homework:</strong> Write 10 everyday examples of AI: maps, translation, recommendations, voice assistants, spam filters, etc.</p><pre>Sample prompt:
