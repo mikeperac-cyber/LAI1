@@ -28,8 +28,13 @@ main{max-width:1180px;margin:auto;padding:28px}
 /* Use content-visibility to defer rendering of off-screen sections, improving initial load performance.
    Heights measured at 1280px viewport width to minimize layout shift. */
 section{background:var(--card);margin:22px 0;padding:26px;border-radius:18px;box-shadow:0 6px 22px rgba(9,30,66,.08);content-visibility:auto;contain-intrinsic-size:auto 591px}
-/* Specific hint for the very long roadmap section to prevent layout shift */
+/* Specific hints for sections with varying heights to prevent layout shift */
 .roadmap-section{content-visibility:auto;contain-intrinsic-size:auto 7561px}
+.tools-section{content-visibility:auto;contain-intrinsic-size:auto 773px}
+.types-section{content-visibility:auto;contain-intrinsic-size:auto 990px}
+.practice-section{content-visibility:auto;contain-intrinsic-size:auto 743px}
+.samples-section{content-visibility:auto;contain-intrinsic-size:auto 935px}
+.notes-section{content-visibility:auto;contain-intrinsic-size:auto 290px}
 h2{color:#0f2753;border-bottom:3px solid var(--gold);padding-bottom:8px}
 h3{color:#14315f;margin-top:24px}
 .badge{display:inline-block;background:var(--soft);color:#173b80;padding:5px 10px;border-radius:999px;font-size:.85rem;margin:3px}
@@ -86,7 +91,7 @@ footer{text-align:center;color:var(--muted);padding:35px;content-visibility:auto
 </ol>
 </section>
 
-<section>
+<section class="tools-section">
 <h2>Main Free and Paid AI Tools: Use Paid Tier + Free Alternative</h2>
 <table>
 <tr><th>Purpose</th><th>Paid / Advanced Option</th><th>Free or Lower-Cost Alternative</th><th>Best Use</th></tr>
@@ -101,7 +106,7 @@ footer{text-align:center;color:var(--muted);padding:35px;content-visibility:auto
 </table>
 </section>
 
-<section>
+<section class="types-section">
 <h2>Types of AI and What They Do</h2>
 <table>
 <tr><th>AI Type</th><th>Role</th><th>Good At</th><th>Bad At</th><th>Best Prompt Style</th></tr>
@@ -237,7 +242,7 @@ You are my AI learning coach. Based on my 30-day AI study notes, create a person
 
 </section>
 
-<section>
+<section class="practice-section">
 <h2>Guided Practice Bank</h2>
 <div class="grid">
 <div class="card"><h3>Practice 1: Simplify</h3><p>Ask AI to explain a hard concept in simple English, then ask for examples and a quiz.</p><pre>Explain neural networks in simple English. Use an analogy, 5 examples, and 5 quiz questions.</pre></div>
@@ -249,7 +254,7 @@ You are my AI learning coach. Based on my 30-day AI study notes, create a person
 </div>
 </section>
 
-<section>
+<section class="samples-section">
 <h2>Sample Prompt Outputs</h2>
 <h3>Prompt 1</h3>
 <pre>You are an AI teacher. Explain generative AI to a complete beginner in 120 words with 3 examples.</pre>
@@ -279,7 +284,7 @@ You are my AI learning coach. Based on my 30-day AI study notes, create a person
 </table>
 </section>
 
-<section>
+<section class="notes-section">
 <h2>Final Notes</h2>
 <ul>
 <li>AI is a helper, not a replacement for judgment.</li>
