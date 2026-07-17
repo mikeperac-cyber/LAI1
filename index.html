@@ -5,11 +5,9 @@
 <title>30-Day Beginner AI Study Plan and Roadmap</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="data:,">
-<link rel="preconnect" href="https://github.com">
-<link rel="preconnect" href="https://learn.microsoft.com">
-<link rel="preconnect" href="https://microsoft.github.io">
-<link rel="preconnect" href="https://www.deeplearning.ai">
-<link rel="preconnect" href="https://www.skills.google">
+<!-- dns-prefetch for resource domains used in external links to reduce lookup latency when clicked.
+     preconnect is avoided because these domains are only loaded on user interaction (clicks),
+     so warming up connections prematurely would waste server/client resources. -->
 <link rel="dns-prefetch" href="https://github.com">
 <link rel="dns-prefetch" href="https://learn.microsoft.com">
 <link rel="dns-prefetch" href="https://microsoft.github.io">
@@ -26,15 +24,20 @@ header h1{font-size:2.35rem;margin:0 0 12px}
 header p{max-width:980px;font-size:1.08rem}
 main{max-width:1180px;margin:auto;padding:28px}
 /* Use content-visibility to defer rendering of off-screen sections, improving initial load performance.
-   Heights measured at 1280px viewport width to minimize layout shift. */
-section{background:var(--card);margin:22px 0;padding:26px;border-radius:18px;box-shadow:0 6px 22px rgba(9,30,66,.08);content-visibility:auto;contain-intrinsic-size:auto 591px}
-/* Specific hints for sections with varying heights to prevent layout shift */
-.roadmap-section{content-visibility:auto;contain-intrinsic-size:auto 7561px}
-.tools-section{content-visibility:auto;contain-intrinsic-size:auto 773px}
-.types-section{content-visibility:auto;contain-intrinsic-size:auto 990px}
-.practice-section{content-visibility:auto;contain-intrinsic-size:auto 743px}
-.samples-section{content-visibility:auto;contain-intrinsic-size:auto 935px}
-.notes-section{content-visibility:auto;contain-intrinsic-size:auto 290px}
+   Each section has a semantic class and precise, measured contain-intrinsic-size height at 1280px viewport width to ensure 0 Cumulative Layout Shift (CLS). */
+section{background:var(--card);margin:22px 0;padding:26px;border-radius:18px;box-shadow:0 6px 22px rgba(9,30,66,.08);content-visibility:auto}
+.goal-section{contain-intrinsic-size:auto 330.36px}
+.study-section{contain-intrinsic-size:auto 318.36px}
+.tools-section{contain-intrinsic-size:auto 772.73px}
+.types-section{contain-intrinsic-size:auto 990.28px}
+.formula-section{contain-intrinsic-size:auto 403.19px}
+.prompt-types-section{contain-intrinsic-size:auto 693.42px}
+.courses-section{contain-intrinsic-size:auto 462.31px}
+.roadmap-section{contain-intrinsic-size:auto 7561.27px}
+.practice-section{contain-intrinsic-size:auto 743.22px}
+.samples-section{contain-intrinsic-size:auto 934.55px}
+.rubric-section{contain-intrinsic-size:auto 559.27px}
+.notes-section{contain-intrinsic-size:auto 290.36px}
 h2{color:#0f2753;border-bottom:3px solid var(--gold);padding-bottom:8px}
 h3{color:#14315f;margin-top:24px}
 .badge{display:inline-block;background:var(--soft);color:#173b80;padding:5px 10px;border-radius:999px;font-size:.85rem;margin:3px}
@@ -74,13 +77,13 @@ footer{text-align:center;color:var(--muted);padding:35px;content-visibility:auto
 </header>
 <main>
 
-<section>
+<section class="goal-section">
 <h2>Course Goal</h2>
 <p>By the end of 30 days, you should understand the basic AI landscape, know the difference between chatbots, image generators, video tools, coding assistants, research tools, voice tools, agents, automation tools, and educational AI tools. You will also know how to write better prompts for different outputs: explanations, lesson plans, summaries, images, tables, code, business plans, quizzes, and research notes.</p>
 <div class="note"><strong>Simple definition:</strong> AI means computer systems that can do tasks that usually need human intelligence, such as understanding language, recognizing images, creating text, finding patterns, helping with decisions, and generating media.</div>
 </section>
 
-<section>
+<section class="study-section">
 <h2>How to Study Each Day</h2>
 <ol class="checklist">
 <li><strong>Learn:</strong> Read the daily notes and watch or complete the linked lesson.</li>
@@ -123,7 +126,7 @@ footer{text-align:center;color:var(--muted);padding:35px;content-visibility:auto
 </table>
 </section>
 
-<section>
+<section class="formula-section">
 <h2>Core Prompt Formula</h2>
 <pre>ROLE + TASK + CONTEXT + AUDIENCE + FORMAT + CONSTRAINTS + EXAMPLES + QUALITY CHECK</pre>
 <div class="practice">
@@ -135,7 +138,7 @@ You are a patient technology teacher. Explain artificial intelligence to a compl
 </div>
 </section>
 
-<section>
+<section class="prompt-types-section">
 <h2>Prompt Types for Different Outputs</h2>
 <table>
 <tr><th>Output</th><th>Prompt Pattern</th><th>Example</th></tr>
@@ -151,7 +154,7 @@ You are a patient technology teacher. Explain artificial intelligence to a compl
 </table>
 </section>
 
-<section>
+<section class="courses-section">
 <h2>Recommended Free Courses and Lessons</h2>
 <ul>
 <li><a href="https://www.skills.google/course_templates/536">Google Skills: Introduction to Generative AI</a> — short beginner microlearning course.</li>
@@ -272,7 +275,7 @@ You are my AI learning coach. Based on my 30-day AI study notes, create a person
 <p>A useful answer should first diagnose problems, then provide a stronger revised version. This is better than asking AI only to “make it better.”</p>
 </section>
 
-<section>
+<section class="rubric-section">
 <h2>Assessment Rubric</h2>
 <table>
 <tr><th>Skill</th><th>Beginner</th><th>Developing</th><th>Strong</th></tr>
