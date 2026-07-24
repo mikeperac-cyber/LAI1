@@ -5,6 +5,9 @@
 <title>30-Day Beginner AI Study Plan and Roadmap</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!-- Use dns-prefetch instead of preconnect for external domains only referenced in navigation links.
      This avoids wasting CPU and network resources performing TLS handshakes for domains that might not be visited,
      while still reducing DNS lookup latency when the links are clicked. -->
@@ -24,22 +27,28 @@ header h1{font-size:2.35rem;margin:0 0 12px}
 header p{max-width:980px;font-size:1.08rem}
 main{max-width:1180px;margin:auto;padding:28px}
 /* Use content-visibility to defer rendering of off-screen sections, improving initial load performance.
-   Heights measured at 1280px viewport width to minimize layout shift. */
-section{background:var(--card);margin:22px 0;padding:26px;border-radius:18px;box-shadow:0 6px 22px rgba(9,30,66,.08);content-visibility:auto;contain-intrinsic-size:auto 591px}
+   Heights measured at 1280px viewport width with 'Inter' loaded to minimize layout shift. */
+section{background:var(--card);margin:22px 0;padding:26px;border-radius:18px;box-shadow:0 6px 22px rgba(9,30,66,.08);content-visibility:auto}
 /* Specific hints for sections with varying heights to prevent layout shift */
-.roadmap-section{content-visibility:auto;contain-intrinsic-size:auto 7561px}
-.tools-section{content-visibility:auto;contain-intrinsic-size:auto 773px}
-.types-section{content-visibility:auto;contain-intrinsic-size:auto 990px}
-.practice-section{content-visibility:auto;contain-intrinsic-size:auto 743px}
-.samples-section{content-visibility:auto;contain-intrinsic-size:auto 935px}
-.notes-section{content-visibility:auto;contain-intrinsic-size:auto 290px}
+.goal-section{contain-intrinsic-size:auto 330px}
+.study-section{contain-intrinsic-size:auto 345px}
+.tools-section{contain-intrinsic-size:auto 798px}
+.types-section{contain-intrinsic-size:auto 1091px}
+.formula-section{contain-intrinsic-size:auto 403px}
+.prompt-types-section{contain-intrinsic-size:auto 819px}
+.courses-section{contain-intrinsic-size:auto 462px}
+.roadmap-section{contain-intrinsic-size:auto 7614px}
+.practice-section{contain-intrinsic-size:auto 748px}
+.samples-section{contain-intrinsic-size:auto 940px}
+.notes-section{contain-intrinsic-size:auto 290px}
+.rubric-section{contain-intrinsic-size:auto 559px}
 h2{color:#0f2753;border-bottom:3px solid var(--gold);padding-bottom:8px}
 h3{color:#14315f;margin-top:24px}
 .badge{display:inline-block;background:var(--soft);color:#173b80;padding:5px 10px;border-radius:999px;font-size:.85rem;margin:3px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 /* Granular content-visibility for repetitive items to further improve scroll smoothness */
-.card{border:1px solid #dbe4f0;border-radius:14px;padding:16px;background:#fff;content-visibility:auto;contain-intrinsic-size:auto 292px}
-.day{border-left:6px solid var(--blue);padding:18px;margin:16px 0;background:#fbfdff;border-radius:12px;content-visibility:auto;contain-intrinsic-size:auto 231px}
+.card{border:1px solid #dbe4f0;border-radius:14px;padding:16px;background:#fff;content-visibility:auto;contain-intrinsic-size:auto 295px}
+.day{border-left:6px solid var(--blue);padding:18px;margin:16px 0;background:#fbfdff;border-radius:12px;content-visibility:auto;contain-intrinsic-size:auto 233px}
 .day h3{margin-top:0}
 table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
 th,td{border:1px solid #d9e2ef;padding:10px;text-align:left;vertical-align:top}
@@ -72,13 +81,13 @@ footer{text-align:center;color:var(--muted);padding:35px;content-visibility:auto
 </header>
 <main>
 
-<section>
+<section class="goal-section">
 <h2>Course Goal</h2>
 <p>By the end of 30 days, you should understand the basic AI landscape, know the difference between chatbots, image generators, video tools, coding assistants, research tools, voice tools, agents, automation tools, and educational AI tools. You will also know how to write better prompts for different outputs: explanations, lesson plans, summaries, images, tables, code, business plans, quizzes, and research notes.</p>
 <div class="note"><strong>Simple definition:</strong> AI means computer systems that can do tasks that usually need human intelligence, such as understanding language, recognizing images, creating text, finding patterns, helping with decisions, and generating media.</div>
 </section>
 
-<section>
+<section class="study-section">
 <h2>How to Study Each Day</h2>
 <ol class="checklist">
 <li><strong>Learn:</strong> Read the daily notes and watch or complete the linked lesson.</li>
@@ -121,7 +130,7 @@ footer{text-align:center;color:var(--muted);padding:35px;content-visibility:auto
 </table>
 </section>
 
-<section>
+<section class="formula-section">
 <h2>Core Prompt Formula</h2>
 <pre>ROLE + TASK + CONTEXT + AUDIENCE + FORMAT + CONSTRAINTS + EXAMPLES + QUALITY CHECK</pre>
 <div class="practice">
@@ -133,7 +142,7 @@ You are a patient technology teacher. Explain artificial intelligence to a compl
 </div>
 </section>
 
-<section>
+<section class="prompt-types-section">
 <h2>Prompt Types for Different Outputs</h2>
 <table>
 <tr><th>Output</th><th>Prompt Pattern</th><th>Example</th></tr>
@@ -149,7 +158,7 @@ You are a patient technology teacher. Explain artificial intelligence to a compl
 </table>
 </section>
 
-<section>
+<section class="courses-section">
 <h2>Recommended Free Courses and Lessons</h2>
 <ul>
 <li><a href="https://www.skills.google/course_templates/536">Google Skills: Introduction to Generative AI</a> — short beginner microlearning course.</li>
@@ -270,7 +279,7 @@ You are my AI learning coach. Based on my 30-day AI study notes, create a person
 <p>A useful answer should first diagnose problems, then provide a stronger revised version. This is better than asking AI only to “make it better.”</p>
 </section>
 
-<section>
+<section class="rubric-section">
 <h2>Assessment Rubric</h2>
 <table>
 <tr><th>Skill</th><th>Beginner</th><th>Developing</th><th>Strong</th></tr>
