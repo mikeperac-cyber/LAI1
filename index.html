@@ -7,7 +7,10 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Optimize Google Fonts request by querying only the active font weights used on the page (400 and 700).
+     This removes unused weights (500 and 600), reducing the CSS stylesheet download size by 50% and improving
+     page rendering and parsing performance. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <!-- Use dns-prefetch instead of preconnect for external domains only referenced in navigation links.
      This avoids wasting CPU and network resources performing TLS handshakes for domains that might not be visited,
      while still reducing DNS lookup latency when the links are clicked. -->
