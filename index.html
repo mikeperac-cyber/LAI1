@@ -56,9 +56,13 @@ h2{color:#0f2753;border-bottom:3px solid var(--gold);padding-bottom:8px}
 h3{color:#14315f;margin-top:24px}
 .badge{display:inline-block;background:var(--soft);color:#173b80;padding:5px 10px;border-radius:999px;font-size:.85rem;margin:3px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-/* Granular content-visibility for repetitive items to further improve scroll smoothness */
-.card{border:1px solid #dbe4f0;border-radius:14px;padding:16px;background:#fff;content-visibility:auto;contain-intrinsic-size:auto 295px}
-.day{border-left:6px solid var(--blue);padding:18px;margin:16px 0;background:#fbfdff;border-radius:12px;content-visibility:auto;contain-intrinsic-size:auto 233px}
+/* Granular content-visibility for repetitive items to further improve scroll smoothness.
+   Under box-sizing: border-box, Chromium uses the content-box dimensions when rendering placeholders.
+   To match the natural total border-box height and prevent Cumulative Layout Shift (CLS):
+   - For .card, the average total height is 295px. Subtracting padding and borders (16px*2 + 1px*2 = 34px) gives 261px.
+   - For .day, the average total height is 233px. Subtracting padding (18px*2 = 36px) gives 197px. */
+.card{border:1px solid #dbe4f0;border-radius:14px;padding:16px;background:#fff;content-visibility:auto;contain-intrinsic-size:auto 261px}
+.day{border-left:6px solid var(--blue);padding:18px;margin:16px 0;background:#fbfdff;border-radius:12px;content-visibility:auto;contain-intrinsic-size:auto 197px}
 .day h3{margin-top:0}
 table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
 th,td{border:1px solid #d9e2ef;padding:10px;text-align:left;vertical-align:top}
@@ -73,8 +77,10 @@ code{padding:2px 5px}
 pre{padding:14px;overflow:auto;white-space:pre-wrap}
 a{color:#1d4ed8}
 .checklist li{margin:7px 0}
-/* Defer footer rendering and use measured height to prevent CLS */
-footer{text-align:center;color:var(--muted);padding:35px;content-visibility:auto;contain-intrinsic-size:auto 128.4px}
+/* Defer footer rendering and use measured height to prevent CLS.
+   With box-sizing: border-box, we subtract padding (35px*2 = 70px) from the natural 128.4px total height
+   to yield a precise 58.4px content-box hint. This prevents any layout shift on scroll. */
+footer{text-align:center;color:var(--muted);padding:35px;content-visibility:auto;contain-intrinsic-size:auto 58.4px}
 @media print{
  body{background:white}
  section{box-shadow:none;border:1px solid #ddd;break-inside:avoid}
